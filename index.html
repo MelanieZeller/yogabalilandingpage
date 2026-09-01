@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yoga Bali</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root{
+    --bg:#16130f;
+    --surface:#1f1a14;
+    --surface-2:#2a231b;
+    --ink:#ece2d0;
+    --ink-soft:#ad9f8a;
+    --accent:#d99a3c;
+    --accent-strong:#f0b563;
+    --line:#3a3025;
+    --shadow: rgba(0,0,0,0.35);
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --bg:#e6e0d0;
+      --surface:#f1ecdf;
+      --surface-2:#dcd4bd;
+      --ink:#221d17;
+      --ink-soft:#5c5344;
+      --accent:#a86a1f;
+      --accent-strong:#8a5518;
+      --line:#cec5ac;
+      --shadow: rgba(60,50,30,0.12);
+    }
+  }
+  :root[data-theme="light"]{
+    --bg:#e6e0d0;
+    --surface:#f1ecdf;
+    --surface-2:#dcd4bd;
+    --ink:#221d17;
+    --ink-soft:#5c5344;
+    --accent:#a86a1f;
+    --accent-strong:#8a5518;
+    --line:#cec5ac;
+    --shadow: rgba(60,50,30,0.12);
+  }
+  :root[data-theme="dark"]{
+    --bg:#16130f;
+    --surface:#1f1a14;
+    --surface-2:#2a231b;
+    --ink:#ece2d0;
+    --ink-soft:#ad9f8a;
+    --accent:#d99a3c;
+    --accent-strong:#f0b563;
+    --line:#3a3025;
+    --shadow: rgba(0,0,0,0.35);
+  }
+
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Public Sans', -apple-system, 'Segoe UI', sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,blockquote{
+    font-family:'Spectral', Georgia, 'Times New Roman', serif;
+    font-weight:400;
+    text-wrap:balance;
+    margin:0;
+  }
+  .mono{
+    font-family:'IBM Plex Mono', 'SF Mono', Consolas, monospace;
+    letter-spacing:0.02em;
+    font-variant-numeric:tabular-nums;
+  }
+  a{ color:inherit; }
+  .wrap{
+    max-width:1080px;
+    margin:0 auto;
+    padding:0 clamp(20px,5vw,56px);
+  }
+  .measure{ max-width:640px; }
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky; top:0; z-index:20;
+    background:color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .headerbar{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px clamp(20px,5vw,56px);
+    max-width:1080px; margin:0 auto;
+    gap:24px;
+  }
+  .wordmark{
+    font-family:'Spectral', serif;
+    font-size:19px;
+    letter-spacing:0.08em;
+    font-weight:400;
+  }
+  nav{ display:flex; gap:28px; align-items:center; }
+  nav a{
+    font-size:13px;
+    text-decoration:none;
+    color:var(--ink-soft);
+    letter-spacing:0.02em;
+    transition:color .15s ease;
+  }
+  nav a:hover, nav a:focus-visible{ color:var(--ink); }
+  .navlinks{ display:flex; gap:26px; }
+  @media (max-width:720px){ .navlinks{ display:none; } }
+
+  .btn{
+    display:inline-block;
+    padding:11px 22px;
+    border:1px solid var(--accent);
+    color:var(--accent-strong);
+    text-decoration:none;
+    font-size:13px;
+    letter-spacing:0.04em;
+    border-radius:2px;
+    transition:background .15s ease, color .15s ease;
+    white-space:nowrap;
+  }
+  .btn:hover, .btn:focus-visible{
+    background:var(--accent);
+    color:var(--bg);
+  }
+
+  a:focus-visible, button:focus-visible, summary:focus-visible{
+    outline:2px solid var(--accent-strong);
+    outline-offset:3px;
+  }
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    padding:clamp(64px,12vw,132px) 0 clamp(56px,9vw,96px);
+    overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+  .contour{
+    position:absolute; inset:0;
+    z-index:0;
+    opacity:0.16;
+    pointer-events:none;
+  }
+  .hero .wrap{ position:relative; z-index:1; }
+  .eyebrow{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    color:var(--accent-strong);
+    margin-bottom:22px;
+    display:block;
+  }
+  h1.headline{
+    font-size:clamp(38px,6.2vw,68px);
+    font-style:italic;
+    font-weight:400;
+    line-height:1.12;
+    max-width:15ch;
+  }
+  .hero-sub{
+    margin-top:28px;
+    font-size:18px;
+    color:var(--ink-soft);
+    max-width:46ch;
+  }
+  .hero-cta-row{
+    margin-top:38px;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    align-items:center;
+  }
+  .textlink{
+    font-size:14px;
+    color:var(--ink-soft);
+    text-decoration:underline;
+    text-decoration-color:var(--line);
+    text-underline-offset:4px;
+  }
+  .textlink:hover{ color:var(--ink); text-decoration-color:var(--accent); }
+
+  .thesis{
+    margin-top:clamp(48px,8vw,80px);
+    padding-top:clamp(32px,6vw,48px);
+    border-top:1px solid var(--line);
+  }
+  .thesis blockquote{
+    font-style:italic;
+    font-size:clamp(20px,2.6vw,26px);
+    line-height:1.5;
+    max-width:34ch;
+    color:var(--ink);
+  }
+  .thesis cite{
+    display:block;
+    margin-top:16px;
+    font-style:normal;
+    font-family:'Public Sans',sans-serif;
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- generic section ---------- */
+  section{ padding:clamp(56px,9vw,104px) 0; }
+  .divider{ border-top:1px solid var(--line); }
+  .section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:24px;
+    margin-bottom:clamp(36px,6vw,56px);
+    flex-wrap:wrap;
+  }
+  .section-eyebrow{
+    font-style:italic;
+    font-family:'Spectral',serif;
+    color:var(--accent-strong);
+    font-size:16px;
+  }
+  h2.section-title{
+    font-size:clamp(26px,3.4vw,36px);
+    max-width:20ch;
+  }
+  .section-note{
+    font-size:14px;
+    color:var(--ink-soft);
+    max-width:34ch;
+  }
+
+  /* ---------- pillars ---------- */
+  .pillars{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:0;
+    border-top:1px solid var(--line);
+    border-left:1px solid var(--line);
+  }
+  @media (max-width:640px){ .pillars{ grid-template-columns:1fr; } }
+  .pillar{
+    padding:32px clamp(20px,3vw,36px);
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .pillar h3{
+    font-size:19px;
+    font-style:italic;
+    margin-bottom:10px;
+  }
+  .pillar p{ margin:0; color:var(--ink-soft); font-size:14.5px; }
+  .pillar .proof{
+    display:block;
+    margin-top:12px;
+    font-size:12px;
+    color:var(--accent-strong);
+  }
+
+  /* ---------- beate ---------- */
+  .beate{
+    display:grid;
+    grid-template-columns:200px 1fr;
+    gap:clamp(28px,5vw,64px);
+    align-items:start;
+  }
+  @media (max-width:680px){ .beate{ grid-template-columns:1fr; } }
+  .monogram{
+    width:150px; height:150px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Spectral',serif;
+    font-size:15px;
+    letter-spacing:0.05em;
+    color:var(--ink-soft);
+    position:relative;
+  }
+  .monogram::before{
+    content:"";
+    position:absolute; inset:10px;
+    border:1px solid var(--line);
+    border-radius:50%;
+  }
+  .beate blockquote{
+    font-style:italic;
+    font-size:21px;
+    line-height:1.5;
+    margin:22px 0;
+    max-width:36ch;
+  }
+  .facts{
+    list-style:none; margin:24px 0 0; padding:0;
+    display:flex; flex-direction:column; gap:8px;
+  }
+  .facts li{
+    font-size:14px; color:var(--ink-soft);
+    display:flex; gap:12px;
+  }
+  .facts .yr{ color:var(--accent-strong); min-width:52px; }
+
+  /* ---------- program ---------- */
+  .locations{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:clamp(20px,3vw,32px);
+    margin-bottom:56px;
+  }
+  @media (max-width:760px){ .locations{ grid-template-columns:1fr; } }
+  .location h3{ font-size:18px; font-style:italic; margin-bottom:8px; }
+  .location p{ margin:0; font-size:14px; color:var(--ink-soft); }
+
+  .schedule{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14.5px;
+  }
+  .schedule th{
+    text-align:left;
+    font-weight:500;
+    font-size:12px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    padding-bottom:10px;
+    border-bottom:1px solid var(--line);
+  }
+  .schedule td{
+    padding:13px 0;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  .schedule td:first-child{ width:120px; color:var(--accent-strong); }
+  .schedule-wrap{ overflow-x:auto; margin-bottom:56px; }
+
+  .includes{
+    columns:2 220px;
+    gap:32px;
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  .includes li{
+    font-size:14.5px;
+    color:var(--ink-soft);
+    margin-bottom:12px;
+    break-inside:avoid;
+    padding-left:18px;
+    position:relative;
+  }
+  .includes li::before{
+    content:"—";
+    position:absolute; left:0; color:var(--accent);
+  }
+
+  /* ---------- honesty ---------- */
+  .honesty{
+    background:var(--surface);
+    border:1px solid var(--line);
+    padding:clamp(28px,5vw,44px);
+    border-radius:3px;
+  }
+  .honesty h2{ font-size:24px; font-style:italic; margin-bottom:16px; }
+  .honesty p{ color:var(--ink-soft); max-width:60ch; margin:0 0 12px; font-size:15px; }
+  .honesty p:last-child{ margin-bottom:0; }
+
+  /* ---------- testimonial ---------- */
+  .testimonial blockquote{
+    font-size:clamp(22px,3vw,28px);
+    font-style:italic;
+    max-width:26ch;
+    line-height:1.45;
+  }
+  .testimonial cite{
+    display:block; margin-top:20px;
+    font-style:normal; font-size:13px; color:var(--ink-soft);
+  }
+  .testimonial .placeholder-note{
+    margin-top:28px;
+    font-size:11.5px;
+    color:var(--ink-soft);
+    opacity:0.7;
+  }
+
+  /* ---------- faq ---------- */
+  .faq-item{
+    border-bottom:1px solid var(--line);
+  }
+  .faq-item summary{
+    padding:20px 0;
+    cursor:pointer;
+    font-size:16px;
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+  }
+  .faq-item summary::-webkit-details-marker{ display:none; }
+  .faq-item summary::after{
+    content:"+";
+    font-family:'Spectral',serif;
+    font-size:20px;
+    color:var(--accent);
+    flex-shrink:0;
+    transition:transform .2s ease;
+  }
+  .faq-item[open] summary::after{ transform:rotate(45deg); }
+  .faq-item p{
+    padding:0 0 22px;
+    margin:0;
+    color:var(--ink-soft);
+    max-width:60ch;
+    font-size:14.5px;
+  }
+
+  /* ---------- footer ---------- */
+  footer{
+    border-top:1px solid var(--line);
+    padding:clamp(48px,8vw,72px) 0 32px;
+  }
+  .footer-top{
+    display:flex; justify-content:space-between; align-items:flex-start;
+    gap:32px; flex-wrap:wrap;
+    padding-bottom:40px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:24px;
+  }
+  .footer-top h2{
+    font-size:clamp(24px,3vw,32px);
+    font-style:italic;
+    max-width:14ch;
+  }
+  .foot-meta{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+    font-size:12px; color:var(--ink-soft);
+  }
+  .foot-meta .disclaimer{ max-width:52ch; opacity:0.75; }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ transition:none !important; animation:none !important; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="headerbar">
+    <div class="wordmark">yoga bali</div>
+    <nav>
+      <div class="navlinks">
+        <a href="#programm">Programm</a>
+        <a href="#beate">Beate</a>
+        <a href="#werte">Werte</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a class="btn" href="#kontakt">Termine anfragen</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <svg class="contour" viewBox="0 0 1080 500" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-20,420 C 200,380 320,460 540,410 C 760,360 860,440 1100,400" fill="none" stroke="var(--accent)" stroke-width="1"/>
+    <path d="M-20,460 C 220,430 340,490 560,450 C 780,410 880,470 1100,440" fill="none" stroke="var(--accent)" stroke-width="1"/>
+    <path d="M-20,380 C 180,340 300,410 520,370 C 740,330 840,400 1100,360" fill="none" stroke="var(--accent)" stroke-width="1"/>
+  </svg>
+  <div class="wrap">
+    <span class="eyebrow">Retreat auf Bali · seit 1991</span>
+    <h1 class="headline">Seit 1991 auf Bali zuhause.</h1>
+    <p class="hero-sub">Ein bis drei Wochen. Tägliche Praxis, echte balinesische Zeremonien, keine Kulisse. Geführt von Beate McLatchie, Gründerin der ersten registrierten Yogaschule der Insel.</p>
+    <div class="hero-cta-row">
+      <a class="btn" href="#kontakt">Termine anfragen</a>
+      <a class="textlink" href="#programm">Ablauf &amp; Standorte ansehen</a>
+    </div>
+
+    <div class="thesis">
+      <blockquote>„Was ich in dreißig Jahren auf dieser Insel gelernt habe, gebe ich nicht in einem Wochenende weiter. Wer wirklich ankommen will, braucht Zeit.“
+        <cite>— Beate McLatchie, Gründerin</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="werte">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="section-eyebrow">Warum anders</span>
+        <h2 class="section-title" style="margin-top:8px;">Vier Dinge, die diesen Ort von anderen Retreats unterscheiden</h2>
+      </div>
+      <p class="section-note">Keine Marketing-Versprechen — nur das, was seit Jahrzehnten tatsächlich passiert.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="pillars">
+      <div class="pillar">
+        <h3>Gelebte Erfahrung</h3>
+        <p>Beate lebt seit 1991 auf Bali und unterrichtet seither hier — nicht als Konzept, sondern als Alltag.</p>
+        <span class="proof mono">35 Jahre vor Ort</span>
+      </div>
+      <div class="pillar">
+        <h3>Tiefe statt Tempo</h3>
+        <p>Ein bis drei Wochen, mehrmals täglich Praxis. Genug Zeit, damit sich wirklich etwas verändert.</p>
+        <span class="proof mono">108 von 200 Ausbildungsstunden</span>
+      </div>
+      <div class="pillar">
+        <h3>Echtes Bali</h3>
+        <p>Drei Standorte abseits der Touristenpfade, geführte Zeremonien, Küche aus der Region.</p>
+        <span class="proof mono">3 Standorte</span>
+      </div>
+      <div class="pillar">
+        <h3>Ehrlichkeit</h3>
+        <p>Klare Voraussetzungen, transparente FAQ, keine Überraschungen vor Ort oder danach.</p>
+        <span class="proof mono">Keine Kleingedruckte</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="beate" class="divider">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="section-eyebrow">Die Lehrerin</span>
+        <h2 class="section-title" style="margin-top:8px;">Beate McLatchie</h2>
+      </div>
+    </div>
+    <div class="beate">
+      <div class="monogram" role="img" aria-label="Monogramm Beate McLatchie">BM</div>
+      <div>
+        <blockquote>„Ich unterrichte nicht, wie man es aus dem Lehrbuch lernt. Ich unterrichte, wie ich selbst über dreißig Jahre gelernt habe — langsam, und mit dieser Insel als Lehrerin.“</blockquote>
+        <ul class="facts">
+          <li><span class="yr mono">1991</span> Übersiedlung nach Bali, Beginn der eigenen Praxis vor Ort</li>
+          <li><span class="yr mono">Gründung</span> der ersten registrierten Yogaschule Balis</li>
+          <li><span class="yr mono">Stile</span> Vinyasa, Hatha, Yin und therapeutisches Yoga</li>
+          <li><span class="yr mono">Haltung</span> ruhig, klar, direkt — ein sicherer Raum statt Show</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="programm" class="divider">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="section-eyebrow">Der Ablauf</span>
+        <h2 class="section-title" style="margin-top:8px;">Ein bis drei Wochen, drei Orte</h2>
+      </div>
+      <p class="section-note">Du wählst die Dauer. Die Standorte wechseln, das Prinzip bleibt: früh beginnen, tief gehen, gemeinsam ankommen.</p>
+    </div>
+
+    <div class="locations">
+      <div class="location">
+        <h3>Kaffeeplantage im Bergland</h3>
+        <p>Kühlere Höhenlage, umgeben von Anbauflächen — ruhiger Auftakt fernab jeder Kulisse.</p>
+      </div>
+      <div class="location">
+        <h3>Ubud-Region</h3>
+        <p>Reisterrassen und Zeremonienplätze, zu Fuß erreichbar — das kulturelle Herzstück des Retreats.</p>
+      </div>
+      <div class="location">
+        <h3>Ostküste</h3>
+        <p>Meer, Ruhe, letzte Tage zum Verarbeiten — bevor der Alltag wieder beginnt.</p>
+      </div>
+    </div>
+
+    <div class="schedule-wrap">
+      <table class="schedule">
+        <thead>
+          <tr><th>Zeit</th><th>Programmpunkt</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mono">06:00</td><td>Pranayama &amp; Meditation vor Sonnenaufgang</td></tr>
+          <tr><td class="mono">07:30</td><td>Vinyasa- oder Hatha-Einheit</td></tr>
+          <tr><td class="mono">09:00</td><td>Frühstück, lokale Bio-Küche</td></tr>
+          <tr><td class="mono">11:00</td><td>Zeremonie, Workshop oder Insel-Ausflug</td></tr>
+          <tr><td class="mono">17:00</td><td>Yin oder therapeutisches Yoga</td></tr>
+          <tr><td class="mono">20:30</td><td>Gemeinsames Ausklingen, Journalling</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ul class="includes">
+      <li>Vollverpflegung mit lokaler Bio-Küche</li>
+      <li>3 geführte Insel-Ausflüge</li>
+      <li>Mehrmals täglich Yoga-Praxis</li>
+      <li>Pranayama, Meditation, Zeremonien</li>
+      <li>108 von 200 Ausbildungsstunden integrierbar</li>
+      <li>Optional: Life Coaching, Spa, Therapien</li>
+    </ul>
+  </div>
+</section>
+
+<section class="divider">
+  <div class="wrap">
+    <div class="honesty">
+      <h2>Für wen das gedacht ist — und für wen nicht</h2>
+      <p>Empfohlen werden ein bis zwei Jahre regelmäßige Yoga-Praxis. Das ist kein Einsteiger-Wellness-Wochenende — wir gehen mehrmals täglich in die Praxis, und das braucht eine Basis.</p>
+      <p>Wenn du nach einem entspannten Strandurlaub mit etwas Yoga suchst, ist das vermutlich nicht der richtige Ort. Wenn du bereit bist, dich auf einen längeren, ehrlichen Prozess einzulassen — dann sehr wohl.</p>
+    </div>
+  </div>
+</section>
+
+<section class="divider testimonial">
+  <div class="wrap">
+    <span class="section-eyebrow">Aus dem Retreat</span>
+    <blockquote style="margin-top:20px;">„Ich bin gekommen, um mich zu erholen. Geblieben ist vor allem: wie viel Zeit es tatsächlich braucht, um wirklich anzukommen.“
+      <cite>— Teilnehmerin, dreiwöchiges Retreat</cite>
+    </blockquote>
+    <p class="placeholder-note">Platzhalter-Zitat für dieses Konzept — im echten Betrieb durch reale, freigegebene Stimmen ersetzt.</p>
+  </div>
+</section>
+
+<section id="faq" class="divider">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="section-eyebrow">Bevor du fragst</span>
+        <h2 class="section-title" style="margin-top:8px;">Häufige Fragen</h2>
+      </div>
+    </div>
+
+    <div>
+      <details class="faq-item">
+        <summary>Brauche ich Vorerfahrung?</summary>
+        <p>Ja, empfohlen werden ein bis zwei Jahre regelmäßige Praxis. Es geht mehrmals täglich in die Tiefe — eine Basis erleichtert das erheblich.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Wie viele Teilnehmende sind dabei?</summary>
+        <p>Bewusst klein gehalten, damit Beate und das Team wirklich auf jede Person eingehen können — Details dazu bei der Anmeldung.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Was ist im Preis enthalten?</summary>
+        <p>Unterkunft, Vollverpflegung, alle Yoga-Einheiten, drei geführte Ausflüge sowie Zeremonien. Optionale Zusatzleistungen wie Spa oder Coaching separat.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Visa, Impfungen, Reiseapotheke?</summary>
+        <p>Alle praktischen Fragen dazu beantworten wir ausführlich nach der Anmeldung — inklusive Packliste und Reiseführer.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer id="kontakt">
+  <div class="wrap">
+    <div class="footer-top">
+      <h2>Bereit für mehr Zeit als ein Wochenende?</h2>
+      <a class="btn" href="#">Per WhatsApp anfragen</a>
+    </div>
+    <div class="foot-meta">
+      <span>yoga bali · Ubud, Bali</span>
+      <span class="disclaimer">Konzept-Redesign · Portfolio-Projekt von Melanie Zeller · nicht die offizielle Website von yogabali.com</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
