@@ -1,0 +1,681 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="de"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1">&lt;title&gt;Yoga Bali&lt;/title&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&amp;family=Public+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>:root{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--bg:#16130f;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--surface:#1f1a14;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--surface-2:#2a231b;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--ink:#ece2d0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--ink-soft:#ad9f8a;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--accent:#d99a3c;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--accent-strong:#f0b563;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--line:#3a3025;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--shadow: rgba(0,0,0,0.35);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>@media (prefers-color-scheme: light){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>:root:not([data-theme="dark"]){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--bg:#e6e0d0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--surface:#f1ecdf;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--surface-2:#dcd4bd;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--ink:#221d17;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--ink-soft:#5c5344;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--accent:#a86a1f;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--accent-strong:#8a5518;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--line:#cec5ac;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--shadow: rgba(60,50,30,0.12);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>:root[data-theme="light"]{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--bg:#e6e0d0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--surface:#f1ecdf;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--surface-2:#dcd4bd;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--ink:#221d17;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--ink-soft:#5c5344;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--accent:#a86a1f;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--accent-strong:#8a5518;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--line:#cec5ac;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--shadow: rgba(60,50,30,0.12);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>:root[data-theme="dark"]{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--bg:#16130f;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--surface:#1f1a14;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--surface-2:#2a231b;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--ink:#ece2d0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--ink-soft:#ad9f8a;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--accent:#d99a3c;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--accent-strong:#f0b563;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--line:#3a3025;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--shadow: rgba(0,0,0,0.35);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>*{ box-sizing:border-box; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>body{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin:0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:var(--bg);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:var(--ink);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family:'Public Sans', -apple-system, 'Segoe UI', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height:1.6;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>-webkit-font-smoothing:antialiased;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>h1,h2,h3,blockquote{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family:'Spectral', Georgia, 'Times New Roman', serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight:400;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-wrap:balance;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin:0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.mono{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family:'IBM Plex Mono', 'SF Mono', Consolas, monospace;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing:0.02em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-variant-numeric:tabular-nums;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>a{ color:inherit; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.wrap{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width:1080px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin:0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:0 clamp(20px,5vw,56px);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.measure{ max-width:640px; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---------- header ---------- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>header{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position:sticky; top:0; z-index:20;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:color-mix(in srgb, var(--bg) 88%, transparent);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>backdrop-filter: blur(8px);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-bottom:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.headerbar{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:flex; align-items:center; justify-content:space-between;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:18px clamp(20px,5vw,56px);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width:1080px; margin:0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap:24px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.wordmark{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family:'Spectral', serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:19px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing:0.08em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight:400;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>nav{ display:flex; gap:28px; align-items:center; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>nav a{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:13px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-decoration:none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:var(--ink-soft);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing:0.02em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transition:color .15s ease;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>nav a:hover, nav a:focus-visible{ color:var(--ink); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.navlinks{ display:flex; gap:26px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>@media (max-width:720px){ .navlinks{ display:none; } }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.btn{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:11px 22px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border:1px solid var(--accent);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:var(--accent-strong);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-decoration:none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:13px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing:0.04em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius:2px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transition:background .15s ease, color .15s ease;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>white-space:nowrap;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.btn:hover, .btn:focus-visible{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:var(--accent);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:var(--bg);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>a:focus-visible, button:focus-visible, summary:focus-visible{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>outline:2px solid var(--accent-strong);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>outline-offset:3px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---------- hero ---------- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position:relative;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:clamp(64px,12vw,132px) 0 clamp(56px,9vw,96px);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>overflow:hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-bottom:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.contour{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position:absolute; inset:0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>z-index:0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>opacity:0.16;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>pointer-events:none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero .wrap{ position:relative; z-index:1; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.eyebrow{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-transform:uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing:0.14em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:var(--accent-strong);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:22px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:block;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>h1.headline{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:clamp(38px,6.2vw,68px);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-style:italic;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight:400;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height:1.12;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width:15ch;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero-sub{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top:28px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:var(--ink-soft);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width:46ch;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero-cta-row{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top:38px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap:20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-wrap:wrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.textlink{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:var(--ink-soft);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-decoration:underline;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-decoration-color:var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-underline-offset:4px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.textlink:hover{ color:var(--ink); text-decoration-color:var(--accent); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.thesis{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top:clamp(48px,8vw,80px);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding-top:clamp(32px,6vw,48px);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-top:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.thesis blockquote{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-style:italic;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:clamp(20px,2.6vw,26px);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height:1.5;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width:34ch;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:var(--ink);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.thesis cite{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top:16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-style:normal;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family:'Public Sans',sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:13px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:var(--ink-soft);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---------- generic section ---------- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>section{ padding:clamp(56px,9vw,104px) 0; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.divider{ border-top:1px solid var(--line); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.section-head{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content:space-between;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items:flex-end;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap:24px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:clamp(36px,6vw,56px);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-wrap:wrap;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.section-eyebrow{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-style:italic;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family:'Spectral',serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:var(--accent-strong);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:16px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>h2.section-title{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:clamp(26px,3.4vw,36px);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width:20ch;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.section-note{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:var(--ink-soft);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width:34ch;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---------- pillars ---------- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.pillars{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns:repeat(2,1fr);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap:0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-top:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-left:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>@media (max-width:640px){ .pillars{ grid-template-columns:1fr; } }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.pillar{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:32px clamp(20px,3vw,36px);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-right:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-bottom:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.pillar h3{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:19px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-style:italic;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:10px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.pillar p{ margin:0; color:var(--ink-soft); font-size:14.5px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.pillar .proof{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top:12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:var(--accent-strong);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---------- beate ---------- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.beate{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns:200px 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap:clamp(28px,5vw,64px);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items:start;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>@media (max-width:680px){ .beate{ grid-template-columns:1fr; } }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.monogram{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width:150px; height:150px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius:50%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:flex; align-items:center; justify-content:center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family:'Spectral',serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:15px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing:0.05em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:var(--ink-soft);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position:relative;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.monogram::before{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>content:"";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position:absolute; inset:10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius:50%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.beate blockquote{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-style:italic;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:21px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height:1.5;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin:22px 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width:36ch;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.facts{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>list-style:none; margin:24px 0 0; padding:0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:flex; flex-direction:column; gap:8px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.facts li{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:14px; color:var(--ink-soft);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:flex; gap:12px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.facts .yr{ color:var(--accent-strong); min-width:52px; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---------- program ---------- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.locations{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns:repeat(3,1fr);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap:clamp(20px,3vw,32px);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:56px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>@media (max-width:760px){ .locations{ grid-template-columns:1fr; } }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.location h3{ font-size:18px; font-style:italic; margin-bottom:8px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.location p{ margin:0; font-size:14px; color:var(--ink-soft); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.schedule{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width:100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-collapse:collapse;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:14.5px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.schedule th{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-align:left;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight:500;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing:0.06em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-transform:uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:var(--ink-soft);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding-bottom:10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-bottom:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.schedule td{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:13px 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-bottom:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>vertical-align:top;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.schedule td:first-child{ width:120px; color:var(--accent-strong); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.schedule-wrap{ overflow-x:auto; margin-bottom:56px; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.includes{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>columns:2 220px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap:32px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin:0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>list-style:none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.includes li{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:14.5px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:var(--ink-soft);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>break-inside:avoid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding-left:18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position:relative;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.includes li::before{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>content:"—";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position:absolute; left:0; color:var(--accent);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---------- honesty ---------- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.honesty{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:var(--surface);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:clamp(28px,5vw,44px);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius:3px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.honesty h2{ font-size:24px; font-style:italic; margin-bottom:16px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.honesty p{ color:var(--ink-soft); max-width:60ch; margin:0 0 12px; font-size:15px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.honesty p:last-child{ margin-bottom:0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---------- testimonial ---------- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.testimonial blockquote{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:clamp(22px,3vw,28px);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-style:italic;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width:26ch;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height:1.45;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.testimonial cite{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:block; margin-top:20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-style:normal; font-size:13px; color:var(--ink-soft);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.testimonial .placeholder-note{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top:28px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:11.5px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:var(--ink-soft);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>opacity:0.7;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---------- faq ---------- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.faq-item{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-bottom:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.faq-item summary{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:20px 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>cursor:pointer;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>list-style:none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content:space-between;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap:16px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.faq-item summary::-webkit-details-marker{ display:none; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.faq-item summary::after{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>content:"+";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family:'Spectral',serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:var(--accent);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-shrink:0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transition:transform .2s ease;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.faq-item[open] summary::after{ transform:rotate(45deg); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.faq-item p{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:0 0 22px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin:0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:var(--ink-soft);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width:60ch;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:14.5px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---------- footer ---------- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>footer{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-top:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:clamp(48px,8vw,72px) 0 32px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.footer-top{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:flex; justify-content:space-between; align-items:flex-start;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap:32px; flex-wrap:wrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding-bottom:40px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-bottom:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:24px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.footer-top h2{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:clamp(24px,3vw,32px);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-style:italic;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width:14ch;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.foot-meta{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:12px; color:var(--ink-soft);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.foot-meta .disclaimer{ max-width:52ch; opacity:0.75; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>@media (prefers-reduced-motion: reduce){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>*{ transition:none !important; animation:none !important; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="headerbar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="wordmark"&gt;yoga bali&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="navlinks"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#programm"&gt;Programm&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#beate"&gt;Beate&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#werte"&gt;Werte&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#faq"&gt;FAQ&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a class="btn" href="#kontakt"&gt;Termine anfragen&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;svg class="contour" viewBox="0 0 1080 500" preserveAspectRatio="none" aria-hidden="true"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;path d="M-20,420 C 200,380 320,460 540,410 C 760,360 860,440 1100,400" fill="none" stroke="var(--accent)" stroke-width="1"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;path d="M-20,460 C 220,430 340,490 560,450 C 780,410 880,470 1100,440" fill="none" stroke="var(--accent)" stroke-width="1"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;path d="M-20,380 C 180,340 300,410 520,370 C 740,330 840,400 1100,360" fill="none" stroke="var(--accent)" stroke-width="1"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="eyebrow"&gt;Retreat auf Bali · seit 1991&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1 class="headline"&gt;Seit 1991 auf Bali zuhause.&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="hero-sub"&gt;Ein bis drei Wochen. Tägliche Praxis, echte balinesische Zeremonien, keine Kulisse. Geführt von Beate McLatchie, Gründerin der ersten registrierten Yogaschule der Insel.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hero-cta-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a class="btn" href="#kontakt"&gt;Termine anfragen&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a class="textlink" href="#programm"&gt;Ablauf &amp;amp; Standorte ansehen&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="thesis"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;blockquote&gt;„Was ich in dreißig Jahren auf dieser Insel gelernt habe, gebe ich nicht in einem Wochenende weiter. Wer wirklich ankommen will, braucht Zeit.“</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;cite&gt;— Beate McLatchie, Gründerin&lt;/cite&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/blockquote&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="werte"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-head"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="section-eyebrow"&gt;Warum anders&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title" style="margin-top:8px;"&gt;Vier Dinge, die diesen Ort von anderen Retreats unterscheiden&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="section-note"&gt;Keine Marketing-Versprechen — nur das, was seit Jahrzehnten tatsächlich passiert.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="pillars"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="pillar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Gelebte Erfahrung&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Beate lebt seit 1991 auf Bali und unterrichtet seither hier — nicht als Konzept, sondern als Alltag.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="proof mono"&gt;35 Jahre vor Ort&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="pillar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Tiefe statt Tempo&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Ein bis drei Wochen, mehrmals täglich Praxis. Genug Zeit, damit sich wirklich etwas verändert.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="proof mono"&gt;108 von 200 Ausbildungsstunden&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="pillar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Echtes Bali&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Drei Standorte abseits der Touristenpfade, geführte Zeremonien, Küche aus der Region.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="proof mono"&gt;3 Standorte&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="pillar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Ehrlichkeit&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Klare Voraussetzungen, transparente FAQ, keine Überraschungen vor Ort oder danach.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="proof mono"&gt;Keine Kleingedruckte&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="beate" class="divider"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-head"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="section-eyebrow"&gt;Die Lehrerin&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title" style="margin-top:8px;"&gt;Beate McLatchie&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="beate"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="monogram" role="img" aria-label="Monogramm Beate McLatchie"&gt;BM&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;blockquote&gt;„Ich unterrichte nicht, wie man es aus dem Lehrbuch lernt. Ich unterrichte, wie ich selbst über dreißig Jahre gelernt habe — langsam, und mit dieser Insel als Lehrerin.“&lt;/blockquote&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul class="facts"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;span class="yr mono"&gt;1991&lt;/span&gt; Übersiedlung nach Bali, Beginn der eigenen Praxis vor Ort&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;span class="yr mono"&gt;Gründung&lt;/span&gt; der ersten registrierten Yogaschule Balis&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;span class="yr mono"&gt;Stile&lt;/span&gt; Vinyasa, Hatha, Yin und therapeutisches Yoga&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;span class="yr mono"&gt;Haltung&lt;/span&gt; ruhig, klar, direkt — ein sicherer Raum statt Show&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="programm" class="divider"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-head"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="section-eyebrow"&gt;Der Ablauf&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title" style="margin-top:8px;"&gt;Ein bis drei Wochen, drei Orte&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="section-note"&gt;Du wählst die Dauer. Die Standorte wechseln, das Prinzip bleibt: früh beginnen, tief gehen, gemeinsam ankommen.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="locations"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="location"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Kaffeeplantage im Bergland&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Kühlere Höhenlage, umgeben von Anbauflächen — ruhiger Auftakt fernab jeder Kulisse.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="location"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Ubud-Region&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Reisterrassen und Zeremonienplätze, zu Fuß erreichbar — das kulturelle Herzstück des Retreats.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="location"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Ostküste&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Meer, Ruhe, letzte Tage zum Verarbeiten — bevor der Alltag wieder beginnt.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="schedule-wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;table class="schedule"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;tr&gt;&lt;th&gt;Zeit&lt;/th&gt;&lt;th&gt;Programmpunkt&lt;/th&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;tr&gt;&lt;td class="mono"&gt;06:00&lt;/td&gt;&lt;td&gt;Pranayama &amp;amp; Meditation vor Sonnenaufgang&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;tr&gt;&lt;td class="mono"&gt;07:30&lt;/td&gt;&lt;td&gt;Vinyasa- oder Hatha-Einheit&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;tr&gt;&lt;td class="mono"&gt;09:00&lt;/td&gt;&lt;td&gt;Frühstück, lokale Bio-Küche&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;tr&gt;&lt;td class="mono"&gt;11:00&lt;/td&gt;&lt;td&gt;Zeremonie, Workshop oder Insel-Ausflug&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;tr&gt;&lt;td class="mono"&gt;17:00&lt;/td&gt;&lt;td&gt;Yin oder therapeutisches Yoga&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;tr&gt;&lt;td class="mono"&gt;20:30&lt;/td&gt;&lt;td&gt;Gemeinsames Ausklingen, Journalling&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;ul class="includes"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;li&gt;Vollverpflegung mit lokaler Bio-Küche&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;li&gt;3 geführte Insel-Ausflüge&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;li&gt;Mehrmals täglich Yoga-Praxis&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;li&gt;Pranayama, Meditation, Zeremonien&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;li&gt;108 von 200 Ausbildungsstunden integrierbar&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;li&gt;Optional: Life Coaching, Spa, Therapien&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="divider"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="honesty"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Für wen das gedacht ist — und für wen nicht&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Empfohlen werden ein bis zwei Jahre regelmäßige Yoga-Praxis. Das ist kein Einsteiger-Wellness-Wochenende — wir gehen mehrmals täglich in die Praxis, und das braucht eine Basis.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Wenn du nach einem entspannten Strandurlaub mit etwas Yoga suchst, ist das vermutlich nicht der richtige Ort. Wenn du bereit bist, dich auf einen längeren, ehrlichen Prozess einzulassen — dann sehr wohl.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="divider testimonial"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="section-eyebrow"&gt;Aus dem Retreat&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;blockquote style="margin-top:20px;"&gt;„Ich bin gekommen, um mich zu erholen. Geblieben ist vor allem: wie viel Zeit es tatsächlich braucht, um wirklich anzukommen.“</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;cite&gt;— Teilnehmerin, dreiwöchiges Retreat&lt;/cite&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/blockquote&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="placeholder-note"&gt;Platzhalter-Zitat für dieses Konzept — im echten Betrieb durch reale, freigegebene Stimmen ersetzt.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="faq" class="divider"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-head"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="section-eyebrow"&gt;Bevor du fragst&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title" style="margin-top:8px;"&gt;Häufige Fragen&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;details class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;summary&gt;Brauche ich Vorerfahrung?&lt;/summary&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Ja, empfohlen werden ein bis zwei Jahre regelmäßige Praxis. Es geht mehrmals täglich in die Tiefe — eine Basis erleichtert das erheblich.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/details&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;details class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;summary&gt;Wie viele Teilnehmende sind dabei?&lt;/summary&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Bewusst klein gehalten, damit Beate und das Team wirklich auf jede Person eingehen können — Details dazu bei der Anmeldung.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/details&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;details class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;summary&gt;Was ist im Preis enthalten?&lt;/summary&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Unterkunft, Vollverpflegung, alle Yoga-Einheiten, drei geführte Ausflüge sowie Zeremonien. Optionale Zusatzleistungen wie Spa oder Coaching separat.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/details&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;details class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;summary&gt;Visa, Impfungen, Reiseapotheke?&lt;/summary&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Alle praktischen Fragen dazu beantworten wir ausführlich nach der Anmeldung — inklusive Packliste und Reiseführer.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/details&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;footer id="kontakt"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-top"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Bereit für mehr Zeit als ein Wochenende?&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a class="btn" href="#"&gt;Per WhatsApp anfragen&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="foot-meta"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;yoga bali · Ubud, Bali&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="disclaimer"&gt;Konzept-Redesign · Portfolio-Projekt von Melanie Zeller · nicht die offizielle Website von yogabali.com&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
